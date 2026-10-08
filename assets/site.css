@@ -359,6 +359,7 @@ dialog.demo .btn{padding:14px 22px;font-size:10px}
 @media (max-width:520px){
   .trat-grid,.idades{grid-template-columns:1fr}
   footer .cols{grid-template-columns:1fr}
+  footer{padding-bottom:104px} /* o botão flutuante não cobre a última linha */
   .ficha{grid-template-columns:1fr}
   .google-strip .nota{font-size:48px}
 }
