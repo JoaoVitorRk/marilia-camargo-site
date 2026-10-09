@@ -67,8 +67,8 @@ sup.conf{display:inline-block;width:5px;height:5px;border-radius:50%;background:
 .intro .nome{font-family:var(--display);font-weight:300;color:var(--ink);font-size:clamp(34px,5vw,60px);letter-spacing:-.01em;text-align:center;animation:intro-nome 1.1s .3s ease both;position:relative;z-index:2}
 .intro .nome em{font-style:italic;font-weight:400;color:var(--cobre)}
 .intro .nome small{display:block;font-family:var(--sans);font-weight:500;font-size:10px;letter-spacing:.4em;text-transform:uppercase;color:var(--cobre);margin-top:16px}
-.intro .laco{position:absolute;left:50%;top:50%;width:auto;height:min(74vh,580px);transform:translate(-50%,-50%);z-index:1}
-.intro .laco use{fill:none;stroke:var(--cobre);stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:700;stroke-dashoffset:700;opacity:.8;animation:laco 1.7s .05s var(--suave) both}
+.intro .laco{position:absolute;left:calc(50% + 7vw);top:47%;width:auto;height:min(82vh,640px);transform:translate(-50%,-50%);z-index:1}
+.intro .laco use{fill:none;stroke:var(--cobre);stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:620;stroke-dashoffset:620;opacity:.8;animation:laco 1.7s .05s var(--suave) both}
 @keyframes laco{to{stroke-dashoffset:0}}
 @keyframes intro-nome{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
 @keyframes intro-sai{to{opacity:0;visibility:hidden}}
@@ -114,11 +114,11 @@ sup.conf{display:inline-block;width:5px;height:5px;border-radius:50%;background:
 section{position:relative;padding:clamp(84px,10vw,132px) 0}
 .claro{background:var(--fundo)}
 .greige{position:relative;background:linear-gradient(180deg,var(--fundo) 0%,var(--fundo-2) 14%,var(--fundo-2) 86%,var(--fundo) 100%)}
-.greige::before{content:"";position:absolute;inset:0;pointer-events:none;background:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 600'><path d='M127 15 C 149.7 59.6, 171.3 70, 170 106 C 169.2 128, 166.4 136.2, 164 150 C 162.3 159.8, 156.9 164.2, 159 174 C 163.6 195.5, 161.2 196, 170 214 C 182.3 239.2, 199.6 263, 199 275 C 198.6 282, 199.2 282, 194 285 C 189.7 287.5, 187.8 287.7, 183 289 C 179.1 290, 175 289, 175 292 C 175 304, 188.3 309.2, 186 322 C 184.8 328.9, 175.3 333, 175 335 C 174.7 337, 187.5 342.4, 185 350 C 180.7 363.3, 168.8 363.1, 170 377 C 171.4 392.9, 181 406, 181 422 C 181 431, 174 439.7, 165 440 C 151 440.5, 127.5 466.3, 124 486 C 119.8 509.6, 122.8 515.5, 128 545' fill='none' stroke='%23A5614A' stroke-width='1.6' stroke-linecap='round'/></svg>") 0 0/130px 260px;opacity:.045;
+.greige::before{content:"";position:absolute;inset:0;pointer-events:none;background:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 600'><path d='M120 88 C 140 92, 156 116, 156 142 C 156 158, 152 166, 149 177 C 147 191, 150 206, 158 221 C 167 234, 177 239, 181 242 C 188 244, 191 252, 186 257 C 182 261, 175 262, 170 264 C 169 274, 175 281, 182 287 C 186 291, 186 296, 180 300 C 185 303, 188 310, 186 318 C 184 326, 177 331, 172 336 C 169 343, 173 352, 179 362 C 185 372, 191 382, 187 391 C 184 397, 174 402, 164 403 C 150 405, 140 417, 136 434 C 132 462, 130 503, 129 545' fill='none' stroke='%23A5614A' stroke-width='1.6' stroke-linecap='round'/></svg>") 0 0/130px 260px;opacity:.045;
   -webkit-mask-image:radial-gradient(80% 70% at 50% 45%,#000 30%,transparent 100%);mask-image:radial-gradient(80% 70% at 50% 45%,#000 30%,transparent 100%)}
 .escuro{position:relative;background:var(--noite);color:var(--papel);isolation:isolate}
 .escuro::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:radial-gradient(60% 50% at 84% 6%,rgba(212,174,135,.14),transparent 70%),radial-gradient(42% 42% at 6% 100%,rgba(165,97,74,.13),transparent 70%)}
-.escuro::after{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 600'><path d='M127 15 C 149.7 59.6, 171.3 70, 170 106 C 169.2 128, 166.4 136.2, 164 150 C 162.3 159.8, 156.9 164.2, 159 174 C 163.6 195.5, 161.2 196, 170 214 C 182.3 239.2, 199.6 263, 199 275 C 198.6 282, 199.2 282, 194 285 C 189.7 287.5, 187.8 287.7, 183 289 C 179.1 290, 175 289, 175 292 C 175 304, 188.3 309.2, 186 322 C 184.8 328.9, 175.3 333, 175 335 C 174.7 337, 187.5 342.4, 185 350 C 180.7 363.3, 168.8 363.1, 170 377 C 171.4 392.9, 181 406, 181 422 C 181 431, 174 439.7, 165 440 C 151 440.5, 127.5 466.3, 124 486 C 119.8 509.6, 122.8 515.5, 128 545' fill='none' stroke='%23D4AE87' stroke-width='1.6' stroke-linecap='round'/></svg>") 0 0/130px 260px;opacity:.035;
+.escuro::after{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 600'><path d='M120 88 C 140 92, 156 116, 156 142 C 156 158, 152 166, 149 177 C 147 191, 150 206, 158 221 C 167 234, 177 239, 181 242 C 188 244, 191 252, 186 257 C 182 261, 175 262, 170 264 C 169 274, 175 281, 182 287 C 186 291, 186 296, 180 300 C 185 303, 188 310, 186 318 C 184 326, 177 331, 172 336 C 169 343, 173 352, 179 362 C 185 372, 191 382, 187 391 C 184 397, 174 402, 164 403 C 150 405, 140 417, 136 434 C 132 462, 130 503, 129 545' fill='none' stroke='%23D4AE87' stroke-width='1.6' stroke-linecap='round'/></svg>") 0 0/130px 260px;opacity:.035;
   -webkit-mask-image:radial-gradient(80% 70% at 50% 50%,#000 30%,transparent 100%);mask-image:radial-gradient(80% 70% at 50% 50%,#000 30%,transparent 100%)}
 .escuro p{color:var(--papel-2)}
 .band{height:clamp(90px,10vw,150px);position:relative;z-index:1;pointer-events:none}
@@ -229,30 +229,26 @@ h2{font-size:var(--t-h2);margin-bottom:26px;max-width:13em}
 .etapas h3{font-family:var(--display);font-weight:300;font-size:var(--t-h3);line-height:1.15;letter-spacing:-.01em;margin-bottom:10px;color:var(--ink)}
 .etapas p{font-size:15.5px;color:var(--ink-2);max-width:22em}
 
-/* tratamentos: índice editorial, áreas fixas à esquerda */
-.tratamentos .wrap{display:grid;grid-template-columns:200px 1fr;gap:clamp(30px,5vw,80px)}
-.tratamentos .cabeca{grid-column:1/-1}
-.areas{position:sticky;top:calc(var(--aviso) + var(--topo) + 32px);align-self:start;list-style:none;display:grid;gap:14px}
-.areas li{font-family:var(--sans);font-weight:500;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-3);display:flex;gap:12px;align-items:center}
-.areas li::before{content:"";width:14px;height:1px;background:var(--hair);transition:width .4s,background .4s}
-.areas li.on{color:var(--cobre)}
-.areas li.on::before{width:28px;background:var(--cobre)}
-.tratamentos .nota-conf{grid-column:2}
+/* tratamentos: a rinoplastia em destaque, o resto em índice compacto */
+.tratamentos .cabeca{max-width:46em}
+.foco{display:grid;grid-template-columns:64px 1fr 56px;gap:0 clamp(18px,2.4vw,34px);align-items:center;padding:clamp(28px,3.5vw,44px) 0;border-top:1px solid var(--cobre);border-bottom:1px solid var(--hair);margin-top:clamp(40px,5vw,64px);color:var(--ink);position:relative}
+.foco .i{font-family:var(--display);font-style:italic;font-weight:400;font-size:22px;color:var(--cobre)}
+.foco h3{font-size:clamp(38px,4.4vw,66px);line-height:1;margin-bottom:14px;transition:color .4s,transform .6s var(--suave)}
+.foco p{font-size:16px;color:var(--ink-2);max-width:40em;margin-bottom:18px}
+.foco .circ{width:56px;height:56px;border-radius:50%;border:1px solid var(--cobre);display:grid;place-items:center;color:var(--cobre);justify-self:end;transition:background .35s,color .35s,transform .5s var(--suave)}
+.foco .circ svg{width:20px;height:10px}
+.foco:hover h3{font-style:italic;color:var(--cobre);transform:translateX(8px)}
+.foco:hover .circ{background:var(--cobre);color:var(--papel);transform:rotate(-45deg)}
+.foco:hover .lk-acao{background-size:100% 1px}
+.rot.tambem{margin:clamp(44px,5vw,64px) 0 8px}
 .indice{list-style:none}
-.indice li{display:grid;grid-template-columns:64px 1.1fr 1.3fr 44px;gap:0 clamp(18px,2.4vw,34px);align-items:baseline;padding:26px 0;border-top:1px solid var(--hair);position:relative;transition:border-color .4s}
-.indice li:last-child{border-bottom:1px solid var(--hair)}
-.indice .i{font-family:var(--display);font-style:italic;font-weight:400;font-size:19px;color:var(--cobre)}
-.indice h3{font-size:clamp(26px,2.6vw,38px);line-height:1.08;transition:color .4s,transform .6s var(--suave)}
-.indice .g{display:block;font-family:var(--sans);font-weight:500;font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-3);margin-top:8px}
-.indice p{font-size:15px;color:var(--ink-2);max-width:30em}
-.indice .circ{width:40px;height:40px;border-radius:50%;border:1px solid var(--cobre);display:grid;place-items:center;color:var(--cobre);justify-self:end;transition:background .35s,color .35s,transform .5s var(--suave)}
-.indice .circ svg{width:16px;height:10px}
-.indice .breve{font-family:var(--display);font-style:italic;font-size:14px;color:var(--ink-3);justify-self:end;white-space:nowrap}
-.indice li.link{cursor:pointer}
-.indice li.link:hover{border-top-color:var(--cobre)}
-.indice li.link:hover h3{font-style:italic;color:var(--cobre);transform:translateX(8px)}
-.indice li.link:hover .circ{background:var(--cobre);color:var(--papel);transform:rotate(-45deg)}
-.indice li.link a{position:absolute;inset:0}
+.indice.compacto{display:grid;grid-template-columns:1fr 1fr;gap:0 clamp(30px,5vw,80px)}
+.indice li{display:grid;grid-template-columns:48px 1fr;gap:0 18px;align-items:baseline;padding:22px 0;border-top:1px solid var(--hair);position:relative}
+.indice li:nth-last-child(-n+2){border-bottom:1px solid var(--hair)}
+.indice .i{font-family:var(--display);font-style:italic;font-weight:400;font-size:17px;color:var(--cobre)}
+.indice h3{font-size:clamp(22px,2vw,28px);line-height:1.1}
+.indice p{grid-column:2;font-size:14.5px;color:var(--ink-2);max-width:30em;margin-top:6px}
+.tratamentos .nota-conf{margin-top:28px}
 
 /* rinoplastia passo a passo (escuro): coluna fixa à esquerda, cronologia à direita */
 .caminho .wrap{display:grid;grid-template-columns:5fr 7fr;gap:clamp(40px,6vw,110px);align-items:start}
@@ -309,7 +305,7 @@ video::-webkit-media-controls,video::-webkit-media-controls-panel,video::-webkit
 .frase-sec{overflow:hidden;padding:clamp(110px,13vw,180px) 0}
 .frase-sec .wrap{display:grid;grid-template-columns:7fr 5fr;gap:clamp(40px,6vw,100px);align-items:center}
 .desenha{position:absolute;right:-3%;top:50%;transform:translateY(-50%);height:76vh;width:auto;z-index:0;pointer-events:none}
-.desenha use{fill:none;stroke:var(--cobre);stroke-width:1;opacity:.11;stroke-dasharray:700;stroke-dashoffset:700;transition:stroke-dashoffset 2.6s var(--suave)}
+.desenha use{fill:none;stroke:var(--cobre);stroke-width:1;opacity:.11;stroke-dasharray:620;stroke-dashoffset:620;transition:stroke-dashoffset 2.6s var(--suave)}
 .desenha.in use{stroke-dashoffset:0}
 .frase{font-family:var(--display);font-weight:300;font-size:clamp(30px,3.3vw,50px);line-height:1.12;letter-spacing:-.012em;padding-left:28px;border-left:1px solid var(--cobre);max-width:17em}
 .frase em{font-style:italic;font-weight:400;color:var(--cobre)}
@@ -354,7 +350,7 @@ video::-webkit-media-controls,video::-webkit-media-controls-panel,video::-webkit
   background:linear-gradient(var(--champ),var(--champ)) no-repeat 0 100%/0 1px;padding-bottom:5px;transition:background-size .45s var(--suave)}
 .cta .links a:hover,.cta .links button:hover{background-size:100% 1px}
 .perfil-grande{height:min(70vh,640px);width:auto;justify-self:center;overflow:visible}
-.perfil-grande use{fill:none;stroke:var(--champ);stroke-width:1;opacity:.5;stroke-dasharray:700;stroke-dashoffset:700;transition:stroke-dashoffset 2.4s var(--suave)}
+.perfil-grande use{fill:none;stroke:var(--champ);stroke-width:1;opacity:.5;stroke-dasharray:620;stroke-dashoffset:620;transition:stroke-dashoffset 2.4s var(--suave)}
 .perfil-grande.in use{stroke-dashoffset:0}
 
 /* rodapé */
@@ -484,6 +480,7 @@ dialog.demo .btn{padding:14px 22px;font-size:10px}
 @media (max-width:900px){
   :root{--topo:66px}
   .aviso .longo{display:none}.aviso .curto{display:inline}
+  .intro .laco{left:52%;height:70vh}
   .so-pc{display:none}.so-cel{display:block}
   .topo nav a.lk{display:none}
   .topo .marca{flex:none;white-space:nowrap;gap:9px}
@@ -516,15 +513,13 @@ dialog.demo .btn{padding:14px 22px;font-size:10px}
   .etapas li{display:grid;grid-template-columns:76px 1fr;gap:0 18px;border-left:0;padding:24px 0 20px}
   .etapas li+li{border-left:0;padding-left:0}
   .etapas .n{font-size:58px;margin:0;grid-row:1/3}
-  .tratamentos .wrap{grid-template-columns:1fr;gap:20px}
-  .areas{position:static;display:flex;flex-wrap:wrap;gap:10px 22px}
-  .tratamentos .nota-conf{grid-column:1}
-  .indice li{grid-template-columns:40px 1fr auto;grid-template-rows:auto auto;gap:0 14px;padding:20px 0}
-  .indice .i{grid-row:1}
-  .indice h3{font-size:24px;grid-column:2;grid-row:1}
-  .indice p{grid-column:2/4;grid-row:2;margin-top:6px}
-  .indice .circ,.indice .breve{grid-column:3;grid-row:1}
-  .indice .circ{width:34px;height:34px}
+  .foco{grid-template-columns:36px 1fr;gap:0 14px}
+  .foco .circ{display:none}
+  .foco h3{font-size:36px}
+  .indice.compacto{grid-template-columns:1fr}
+  .indice li:nth-last-child(-n+2){border-bottom:0}
+  .indice li:last-child{border-bottom:1px solid var(--hair)}
+  .indice li{grid-template-columns:36px 1fr;padding:18px 0}
   .caminho .wrap{grid-template-columns:1fr;gap:40px}
   .fixo{position:static}
   .colagem{max-width:none;padding:0 26% 22% 0}

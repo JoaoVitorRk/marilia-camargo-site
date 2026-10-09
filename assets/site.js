@@ -129,23 +129,6 @@ if (crono) {
   passos.forEach(li => obs.observe(li));
 }
 
-// tratamentos: a área que está na tela acende na coluna fixa
-const areas = [...document.querySelectorAll('.areas li')];
-const itensIndice = [...document.querySelectorAll('.indice li[data-area]')];
-if (areas.length && itensIndice.length) {
-  let pedidoA = false;
-  const acende = () => {
-    pedidoA = false;
-    const linha = innerHeight * 0.45;
-    let alvo = itensIndice[0];
-    for (const li of itensIndice) { const r = li.getBoundingClientRect(); if (r.top <= linha) alvo = li; }
-    const area = alvo.dataset.area;
-    areas.forEach(a => a.classList.toggle('on', a.dataset.area === area));
-  };
-  addEventListener('scroll', () => { if (!pedidoA) { pedidoA = true; requestAnimationFrame(acende); } }, { passive: true });
-  acende();
-}
-
 // página de tratamento: âncora ativa na barra
 const ancoras = [...document.querySelectorAll('.ancoras a[href^="#"]')];
 if (ancoras.length) {
