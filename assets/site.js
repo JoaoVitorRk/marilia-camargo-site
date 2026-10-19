@@ -1,4 +1,4 @@
-// Prévia · Dra. Marília Camargo · Otorrinolaringologia · RK Performance · v2
+// Dra. Marília Camargo · Otorrinolaringologia · RK Performance · v3 (versão de entrega)
 document.documentElement.classList.add('js');
 
 // abertura cinematográfica: some sozinha; se a animação não rodar, tira à força
@@ -16,31 +16,6 @@ addEventListener('scroll', marcaTopo, { passive: true }); marcaTopo();
 // revelação ao rolar (título por máscara, foto por escala, corpo por opacidade: tudo via a classe .in)
 const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -4% 0px' });
 document.querySelectorAll('.rv, .desenha, .desenha-rv').forEach(el => io.observe(el));
-
-// aviso de demonstração: na prévia, os botões de WhatsApp e telefone não ligam para o consultório.
-// No site final, cada botão abre o WhatsApp da Dra. com a mensagem daquela página.
-const demo = document.getElementById('demo');
-const demoMsg = document.getElementById('demo-msg');
-const demoTit = document.getElementById('demo-tit');
-const demoTxt = document.getElementById('demo-txt');
-document.querySelectorAll('[data-demo]').forEach(el => {
-  el.addEventListener('click', e => {
-    e.preventDefault();
-    const tipo = el.dataset.demo;
-    if (tipo === 'tel') {
-      demoTit.textContent = 'Ligar para a clínica';
-      demoTxt.textContent = 'No site final, este botão liga para o telefone da Clínica Respirare (o número que a Dra. Marília indicar).';
-      demoMsg.textContent = '(42) 98871-0130 · WhatsApp da Clínica Respirare (Google e link da bio), a confirmar';
-    } else {
-      demoTit.textContent = 'Agendar pelo WhatsApp';
-      demoTxt.textContent = 'No site final, este botão abre o WhatsApp da clínica com a mensagem já escrita. Assim a secretária sabe que a paciente veio pelo site e qual página ela viu:';
-      demoMsg.textContent = el.dataset.msg || 'Olá! Vim pelo site e quero agendar uma consulta com a Dra. Marília.';
-    }
-    if (typeof demo.showModal === 'function') demo.showModal(); else demo.setAttribute('open', '');
-  });
-});
-demo && demo.querySelectorAll('[data-fecha]').forEach(b => b.addEventListener('click', () => demo.close()));
-demo && demo.addEventListener('click', e => { if (e.target === demo) demo.close(); });
 
 // vídeos: mudos, em loop, sem controles; tocam quando aparecem na tela; o selo liga o som
 const videos = [...document.querySelectorAll('.vid video')];

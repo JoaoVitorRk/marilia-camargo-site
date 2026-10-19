@@ -1,4 +1,4 @@
-/* Dra. Marília Camargo · Otorrinolaringologia e rinoplastia · prévia RK Performance · v2 (08/10/2026)
+/* Dra. Marília Camargo · Otorrinolaringologia e rinoplastia · RK Performance · v3, versão de entrega (19/10/2026)
    Sistema visual claro da prévia da Dra. Luara Cabral, com a paleta medida nas fotos dela e da Clínica Respirare
    (névoa clara e lilás-cinza das artes, madeira, mármore, latão e a terracota dos posts).
    v2: acabamento de luxo pedido pelo João: faixas de degradê entre seções, letreiro, selo giratório, marca d'água do perfil,
@@ -18,7 +18,7 @@
   --t-rot:10.5px; --t-rot-ls:.22em;
   --t-h3:clamp(23px,2vw,29px); --t-h2:clamp(40px,4.8vw,74px); --t-h1:clamp(58px,7.2vw,108px);
   --t-num:clamp(64px,7vw,112px); --t-cita:clamp(25px,2.5vw,36px);
-  --pad:clamp(22px,5vw,80px); --max:1280px; --topo:78px; --aviso:26px;
+  --pad:clamp(22px,5vw,80px); --max:1280px; --topo:78px; --aviso:0px;
   --suave:cubic-bezier(.2,.7,.2,1);
 }
 *{box-sizing:border-box;margin:0;padding:0}
@@ -45,8 +45,6 @@ svg.defs{position:absolute;width:0;height:0;overflow:hidden}
 .rot.c{justify-content:center}
 .escuro .rot,.escuro .rot .cap{color:var(--champ)}.escuro .rot::before{background:var(--champ)}
 .caps{font-family:var(--sans);font-weight:500;font-size:var(--t-rot);letter-spacing:var(--t-rot-ls);text-transform:uppercase}
-sup.conf{display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--cobre);opacity:.5;vertical-align:super;margin-left:5px;font-size:0;line-height:0;cursor:help}
-.escuro sup.conf{background:var(--champ)}
 .nota-conf{font-family:var(--sans);font-weight:500;font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-3);margin-top:26px}
 .escuro .nota-conf{color:var(--papel-3)}
 
@@ -55,11 +53,6 @@ sup.conf{display:inline-block;width:5px;height:5px;border-radius:50%;background:
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   animation:grao 1.2s steps(6) infinite}
 @keyframes grao{0%{transform:translate(0,0)}20%{transform:translate(-3%,2%)}40%{transform:translate(2%,-3%)}60%{transform:translate(-2%,-1%)}80%{transform:translate(3%,3%)}100%{transform:translate(0,0)}}
-
-/* aviso de prévia */
-.aviso{position:fixed;top:0;left:0;right:0;z-index:62;height:var(--aviso);display:flex;align-items:center;justify-content:center;padding:0 12px;
-  background:var(--noite);color:var(--champ);font-family:var(--sans);font-weight:500;font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.aviso .curto{display:none}
 
 /* abertura: o nome e o perfil de rosto (linha única) se desenhando sobre marfim */
 .intro{display:none}
@@ -424,22 +417,18 @@ footer .rk{margin-top:18px;font-family:var(--sans);font-weight:500;font-size:9px
 .js .quadro.rv.in:hover::after{transform:translate(10px,10px)}
 .js .quadro.rv.in .detalhe::after,.js .quadro.rv.in.detalhe::after{transform:translate(12px,12px)}
 
-/* aviso de demonstração */
-dialog.demo{border:1px solid var(--hair);padding:0;max-width:min(92vw,480px);background:var(--fundo);color:var(--ink);box-shadow:0 40px 90px -20px rgba(26,22,20,.5)}
-dialog.demo::backdrop{background:rgba(26,22,20,.6);backdrop-filter:blur(4px)}
-dialog.demo .in{padding:34px 34px 30px;position:relative}
-dialog.demo h3{font-size:28px;margin-bottom:12px}
-dialog.demo p{color:var(--ink-2);font-size:15px}
-dialog.demo blockquote{margin:18px 0 26px;padding:14px 18px;border-left:1px solid var(--cobre);background:rgba(120,81,69,.06);font-size:15px;color:var(--ink)}
-dialog.demo .acoes{gap:12px 24px}
-dialog.demo .btn{padding:14px 22px;font-size:10px}
-
 /* página de tratamento */
 .pagina-topo{padding:calc(var(--aviso) + var(--topo) + 56px) 0 70px;overflow:hidden}
 .pagina-topo .wrap{display:grid;grid-template-columns:7fr 5fr;gap:clamp(36px,6vw,100px);align-items:end}
 .pagina-topo .marca-agua{right:auto;left:38%;top:-6%;height:120vh}
 .pagina-topo h1{font-size:clamp(46px,6.4vw,96px);max-width:11em;margin-bottom:26px}
 .pagina-topo .lede{max-width:36em}
+/* páginas curtas: privacidade e 404 */
+.pagina-curta .wrap,.pagina-erro .wrap{grid-template-columns:1fr}
+.pagina-curta{padding-bottom:40px}
+.pagina-erro{min-height:82svh;display:flex;align-items:center}
+.pagina-erro .wrap{width:100%}
+.pagina-erro .acoes{margin-top:38px}
 .pagina-topo .vid{margin-left:auto;max-width:360px}
 .pagina-topo .ficha{grid-column:1/-1;grid-template-columns:repeat(4,1fr);margin-top:clamp(40px,5vw,64px);max-width:none}
 .pagina-topo .nota-conf{grid-column:1/-1}
@@ -506,7 +495,6 @@ dialog.demo .btn{padding:14px 22px;font-size:10px}
 /* celular */
 @media (max-width:900px){
   :root{--topo:66px}
-  .aviso .longo{display:none}.aviso .curto{display:inline}
   .intro .laco{left:50%;top:30%;height:46vh}
   .intro .nome{margin-top:34vh;font-size:40px}
   .so-pc{display:none}.so-cel{display:block}
